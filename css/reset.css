@@ -47,5 +47,5 @@ table {
 	border-spacing: 0;
 }
 img {
-	width: 100%;
+	max-width: 100%;
 }
