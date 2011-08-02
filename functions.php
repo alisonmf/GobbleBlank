@@ -1,4 +1,14 @@
 <?php
+
+	//menu support	
+	add_theme_support( 'menus' );
+	
+		register_nav_menus(
+			array(
+			'menu-main' => __( 'Top Navigation' ),
+			'menu-footer' => __( 'Footer Navigation' )
+			)
+		);
 	
 	// Add RSS links to <head> section
 	automatic_feed_links();
@@ -29,5 +39,20 @@
     		'after_title'   => '</h2>'
     	));
     }
+    
+    //iframe support in tincymce (mostly for vimeo video support)
+    function mytheme_tinymce_config( $init ) {
+	$valid_iframe = 'iframe[id|class|title|style|align|frameborder|height|longdesc|marginheight|marginwidth|name|scrolling|src|width]';
+	if ( isset( $init['extended_valid_elements'] ) ) {
+		$init['extended_valid_elements'] .= ',' . $valid_iframe;
+		
+	} else {
+		$init['extended_valid_elements'] = $valid_iframe;
+	}
+	
+	return $init;
+	}
+	
+	add_filter('tiny_mce_before_init', 'mytheme_tinymce_config');
 
 ?>

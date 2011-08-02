@@ -56,9 +56,6 @@
 			<div class="description"><?php bloginfo('description'); ?></div>
 			
 			<ul id="nav">
-				<li><a href="#nowhere" title="Home">>Home</a></li>
-				<li><a href="#nowhere" title="About">>About</a></li>
-				<li><a href="#nowhere" title="Services">>Services</a></li>
-				<li><a href="#nowhere" title="Contact">>Contact</a></li>
-			</ul><!-- /#nav  -->
+				<?php wp_nav_menu( array( 'theme_location' => 'menu-main', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
+			</ul>
 		</div>
