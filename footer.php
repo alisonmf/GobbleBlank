@@ -1,5 +1,5 @@
 		<div id="footer">
-				<ul id="footNav">
+				<ul id="footerNav">
 					<?php wp_nav_menu( array( 'theme_location' => 'menu-footer', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
 				</ul>
 			&copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?>
