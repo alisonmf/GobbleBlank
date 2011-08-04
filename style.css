@@ -9,4 +9,4 @@ Version: .1
 
 @import url('css/reset.css'); /* Everyone always has their own version */
 @import url('css/type.css'); /* i try to separate font-family and define colors here */
-@import url('css/global.css') /* main elements, main classes, mostly wp related */
+@import url('css/global.css'); /* main elements, main classes, mostly wp related */
