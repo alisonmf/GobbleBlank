@@ -1,0 +1,12 @@
+/* default WP styles for use in WYSIWYG automatically */
+
+.alignright {float:right;}
+.alignleft {float:left;}
+.aligncenter {clear:both;}
+
+
+/* general short styles */
+
+.right {float:right;}
+.left {float:left;}
+.clear {clear: both;}
