@@ -16,12 +16,7 @@
 		<meta name="viewport" content="width=device-width" />
 		<!--[if IE]><![endif]-->
 		<title>
-			<?php
-			/*
-			 * Print the <title> tag based on what is being viewed.
-			 */
-			global $page, $paged;
-		
+			<?php		
 			wp_title( '|', true, 'right' );
 		
 			// Add the blog name.
