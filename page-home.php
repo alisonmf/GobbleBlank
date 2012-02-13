@@ -14,8 +14,6 @@
 
 	<?php endwhile;  else :  endif; ?>
 
-<?php get_sidebar(); ?>
-
 	</div><!-- /#content -->
 
 <?php get_footer(); ?>
