@@ -13,11 +13,15 @@
 	// Add RSS links to <head> section
 	automatic_feed_links();
 	
-	// Load jQuery
+	// Load jQuery and jQuery UI
 	if ( !is_admin() ) {
 	   wp_deregister_script('jquery');
-	   wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"), false);
+	   wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"), false);
 	   wp_enqueue_script('jquery');
+	   
+	   wp_deregister_script('jquery_ui');
+	   wp_register_script('jquery_ui', ("https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"), false);
+	   wp_enqueue_script('jquery_ui');
 	}
 	
 	// Clean up the <head>
