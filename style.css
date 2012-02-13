@@ -13,3 +13,7 @@ Github: https://github.com/gobblelogic/GobbleBlank/
 @import url('css/global.css'); /* main elements, main classes, mostly wp related */
 @import url('css/menu.css'); /* menu css can be long, so it's here */
 @import url('css/ie.css'); /* any ie styles can go here, don't forget #ie7 */
+
+#wrapper {}
+
+#header {}
