@@ -4,9 +4,11 @@ Theme URI: http://gobblelogic.com
 Description: Blank WordPress Theme - Starter
 Author: Alison Foxall + MCFW
 Author URI: http://gobblelogic.com
-Version: .1
+Version: .2
 */
 
 @import url('css/reset.css'); /* Everyone always has their own version */
-@import url('css/type.css'); /* i try to separate font-family and define colors here */
+@import url('css/type.css'); /* I try to separate font-family and define colors here */
 @import url('css/global.css'); /* main elements, main classes, mostly wp related */
+@import url('css/menu.css'); /* menu css can be long, so it's here */
+@import url('css/ie.css'); /* any ie styles can go here, don't forget #ie7 */
