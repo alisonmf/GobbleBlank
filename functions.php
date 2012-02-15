@@ -19,9 +19,9 @@
 	   wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"), false);
 	   wp_enqueue_script('jquery');
 	   
-	   wp_deregister_script('jquery_ui');
-	   wp_register_script('jquery_ui', ("https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"), false);
-	   wp_enqueue_script('jquery_ui');
+	   wp_deregister_script('jquery-ui-core');
+	   wp_register_script('jquery-ui-core', ("https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"), false);
+	   wp_enqueue_script('jquery-ui-core');
 	}
 	
 	// Clean up the <head>
