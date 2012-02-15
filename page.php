@@ -16,8 +16,6 @@
 
 			</div>
 
-			<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
-
 		</div>
 
 		<?php endwhile; endif; ?>

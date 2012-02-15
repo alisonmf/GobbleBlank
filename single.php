@@ -18,8 +18,6 @@
 
 			</div>
 			
-			<?php edit_post_link('Edit this entry','','.'); ?>
-			
 		</div>
 
 	<?php comments_template(); ?>
