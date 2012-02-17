@@ -9,7 +9,7 @@
 
 	<?php wp_footer(); ?>
 	
-	<!-- Analytics -->
+	<!-- Analytics, just replace the UA number -->
 	
 	<script type="text/javascript">
 	/*
