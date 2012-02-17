@@ -8,5 +8,5 @@ I thought it was a great idea to publish a blank theme for everyone to use for f
 
 More to come later.
 
-Alison Foxall, Designer
+Alison Foxall, Designer  
 [Gobble Logic] (http://gobblelogic.com)
