@@ -2,7 +2,7 @@
 
 .alignright {float:right;}
 .alignleft {float:left;}
-.aligncenter {clear:both;}
+.aligncenter {clear:both; margin: 0 25%;}
 
 
 /* general short styles */
