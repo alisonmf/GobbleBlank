@@ -1,11 +1,14 @@
 		<div id="footer">
-				<ul id="footer-menu">
-					<?php wp_nav_menu( array( 'theme_location' => 'menu-footer', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
+		
+				<ul id="footer-menu">			
+					<?php wp_nav_menu( array( 'theme_location' => 'menu-footer', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>					
 				</ul>
-				<span>&copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?></span>
-		</div>
+				
+				<span id="copyright">&copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?></span>
+				
+		</div><!-- /#footer -->
 
-	</div>
+	</div><!-- /#wrapper -->
 
 	<?php wp_footer(); ?>
 	

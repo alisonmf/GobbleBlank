@@ -61,7 +61,7 @@
 	
 	add_filter('tiny_mce_before_init', 'mytheme_tinymce_config');
 	
-	//pulls the main stylesheet for the wysiwyg editor
+	//pulls the main stylesheet for the wysiwyg editor, good for clients!
 	if ( ! function_exists('tdav_css') ) {
 	function tdav_css($wp) {
 		$wp .= ',' . get_bloginfo('stylesheet_url');
