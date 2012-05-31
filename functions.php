@@ -11,7 +11,7 @@
 		);
 	
 	// Add RSS links to <head> section
-	automatic_feed_links();
+	add_theme_support( 'automatic-feed-links' );
 	
 	// Load jQuery and jQuery UI
 	// For more libraries, visit the codex and search for wp_enqueue_script
