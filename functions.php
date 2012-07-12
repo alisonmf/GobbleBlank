@@ -10,6 +10,9 @@
 			)
 		);
 	
+	//custom background support for client
+	add_theme_support( 'custom-background' );
+	
 	// Add RSS links to <head> section
 	add_theme_support( 'automatic-feed-links' );
 	
