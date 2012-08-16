@@ -1,7 +1,11 @@
 <?php get_header(); ?>
 
-	<h2>Gobble Gobble Gobble. We don't know what happened. We just Gobble. Gobble Gobble Gobble.</h2>
+	<div id="content">
+
+		<h2>Gobble Gobble Gobble. We don't know what happened. We just Gobble. Gobble Gobble Gobble.</h2>
+		
+		<p>Return <a href="<?php bloginfo('url'); ?>">Home</a></p>
 	
-	<p>Return <a href="<?php bloginfo('url'); ?>">Home</a></p>
+	</div>
 
 <?php get_footer(); ?>
