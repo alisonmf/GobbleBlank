@@ -12,6 +12,8 @@ Github: https://github.com/gobblelogic/GobbleBlank/
 @import url('css/type.css'); /* I try to separate font-family and define colors here */
 @import url('css/menu.css'); /* menu css can be long, so it's here */
 
+/* Basic Type */
+
 html {font: 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;}
 
 h1,h2,h3,h,h5,h6 { margin: 1em 0; }
@@ -20,9 +22,12 @@ strong 	{ font-weight: bold; }
 em 		{ font-style: italic; }
 
 /* Basic List Styles */
+
 #content ol, #content ul 	{ margin: 1em 2em; }
 #content ul 				{ list-style-type: square; }
 #content ol 				{ list-style-type: decimal; }
+
+/* Layout */
 
 #wrapper { margin: 0 auto; width: 85%; max-width: 1150px; }
 
