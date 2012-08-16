@@ -17,3 +17,16 @@ Github: https://github.com/gobblelogic/GobbleBlank/
 #wrapper { margin: 0 auto; width: 85%; max-width: 1150px; }
 
 #header {}
+
+/* WP */
+
+.alignright 	{float: right;}
+.alignleft 		{float: left;}
+.aligncenter 	{clear: both; margin: 0 25%;}
+
+
+/* General */
+
+.right 	{float: right;}
+.left 	{float: left;}
+.clear 	{clear: both;}
