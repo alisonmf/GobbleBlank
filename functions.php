@@ -13,9 +13,6 @@
 	//custom background support for client
 	add_theme_support( 'custom-background' );
 	
-	// Add RSS links to <head> section
-	add_theme_support( 'automatic-feed-links' );
-	
 	// Clean up the <head>
 	function removeHeadLinks() {
     	remove_action('wp_head', 'rsd_link');
