@@ -4,15 +4,14 @@ Theme URI: http://gobblelogic.com
 Description: Blank Starter WordPress Theme
 Author: Alison Foxall + Matt Wild
 Author URI: http://gobblelogic.com
-Version: .3
+Version: .5
 Github: https://github.com/gobblelogic/GobbleBlank/
 */
 
-@import url('css/reset.css'); /* Everyone always has their own version */
-@import url('css/type.css'); /* I try to separate font-family and define colors here */
-@import url('css/menu.css'); /* menu css can be long, so it's here */
+@import url('css/reset.css');
+@import url('css/menu.css');
 
-/* Basic Type */
+/* @group Basic Type */
 
 html {font: 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;}
 
@@ -21,27 +20,37 @@ h1,h2,h3,h,h5,h6 { margin: 1em 0; }
 strong 	{ font-weight: bold; }
 em 		{ font-style: italic; }
 
-/* Basic List Styles */
+/* @end group*/
+
+/* @group Basic List Styles */
 
 #content ol, #content ul 	{ margin: 1em 2em; }
 #content ul 				{ list-style-type: square; }
 #content ol 				{ list-style-type: decimal; }
 
-/* Layout */
+/* @end group */
+
+/* @group Layout */
 
 #wrapper { margin: 0 auto; width: 85%; max-width: 1150px; }
 
 #header {}
 
-/* WP */
+/* @end group */
+
+/* @group WP */
 
 .alignright 	{float: right;}
 .alignleft 		{float: left;}
 .aligncenter 	{clear: both; margin: 0 25%;}
 
+/* @end group WP */
 
-/* General */
+
+/* @group General */
 
 .right 	{float: right;}
 .left 	{float: left;}
 .clear 	{clear: both;}
+
+/* @end group */
