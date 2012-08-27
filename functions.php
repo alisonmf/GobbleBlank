@@ -13,6 +13,9 @@
 	//custom background support for client
 	add_theme_support( 'custom-background' );
 	
+	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
+	add_theme_support( 'post-thumbnails' );
+	
 	// Clean up the <head>
 	function removeHeadLinks() {
     	remove_action('wp_head', 'rsd_link');
