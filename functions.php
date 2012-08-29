@@ -56,7 +56,6 @@
 	
 	return $init;
 	}
-	
 	add_filter('tiny_mce_before_init', 'mytheme_tinymce_config');
 	
 	//pulls the main stylesheet for the wysiwyg editor, good for clients!
@@ -65,8 +64,7 @@
 		$wp .= ',' . get_bloginfo('stylesheet_url');
 	return $wp;
 	}
-	}
-	
+	}	
 	add_filter( 'mce_css', 'tdav_css' );
 
 ?>
