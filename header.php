@@ -45,7 +45,7 @@
 
 		<div id="header">
 		
-			<a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a>
+			<a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
 			
 			<div class="description"><?php bloginfo('description'); ?></div>
 			
