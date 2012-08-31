@@ -13,6 +13,9 @@
 	//custom background support for client
 	add_theme_support( 'custom-background' );
 	
+	//pulls the main stylesheet for the wysiwyg editor for client
+	add_editor_style('style.css');
+	
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
 	add_theme_support( 'post-thumbnails' );
 	
@@ -24,17 +27,32 @@
     add_action('init', 'removeHeadLinks');
     remove_action('wp_head', 'wp_generator');
     
-    if (function_exists('register_sidebar')) {
-    	register_sidebar(array(
-    		'name' => 'Sidebar Widgets',
-    		'id'   => 'sidebar-widgets',
-    		'description'   => 'These are widgets for the sidebar.',
+    //add our widgets
+    function gobsnack_widgets_init() {
+    
+    	register_sidebar( array(
+    		'name' => __( 'Main Sidebar', 'gobbleblank' ),
+    		'id' => 'sidebar-main',
+    		'description' => __( 'The sidebar is your main sidebar', 'gobbleblank' ),
     		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    		'after_widget'  => '</div>',
-    		'before_title'  => '<h2>',
-    		'after_title'   => '</h2>'
-    	));
+    		'after_widget' => "</div>",
+    		'before_title' => '<h3 class="widget-title">',
+    		'after_title' => '</h3>',
+    	) );
+    
+    	register_sidebar( array(
+    		'name' => __( 'Other Sidebar', 'gobbleblank' ),
+    		'id' => 'sidebar-other',
+    		'description' => __( 'The sidebar is for extra content', 'gobbleblank' ),
+    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    		'after_widget' => "</div>",
+    		'before_title' => '<h3 class="widget-title">',
+    		'after_title' => '</h3>',
+    	) );
+    
     }
+    add_action( 'widgets_init', 'gobsnack_widgets_init' );    
+    
     
     //adds a menu class to the first and last child for your dynamic menus    	
 	function add_first_and_last($output) {
@@ -57,14 +75,5 @@
 	return $init;
 	}
 	add_filter('tiny_mce_before_init', 'mytheme_tinymce_config');
-	
-	//pulls the main stylesheet for the wysiwyg editor, good for clients!
-	if ( ! function_exists('tdav_css') ) {
-	function tdav_css($wp) {
-		$wp .= ',' . get_bloginfo('stylesheet_url');
-	return $wp;
-	}
-	}	
-	add_filter( 'mce_css', 'tdav_css' );
 
 ?>
