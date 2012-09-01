@@ -8,7 +8,7 @@
 			
 			<h2><?php the_title(); ?></h2>
 			
-			<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
+			<?php get_template_part('meta'); ?>
 
 			<div class="entry">
 				
