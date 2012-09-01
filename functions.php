@@ -1,4 +1,7 @@
 <?php
+	
+	//set the content width. for media gallery image sizing. "large" images will be set to the below value
+	if ( ! isset( $content_width ) ) $content_width = 800;
 
 	//menu support	
 	add_theme_support( 'menus' );
