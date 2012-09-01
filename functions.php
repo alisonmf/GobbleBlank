@@ -25,13 +25,14 @@
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
 	add_theme_support( 'post-thumbnails' );
 	
-	// Clean up the <head>
-	function removeHeadLinks() {
-    	remove_action('wp_head', 'rsd_link');
-    	remove_action('wp_head', 'wlwmanifest_link');
-    }
-    add_action('init', 'removeHeadLinks');
-    remove_action('wp_head', 'wp_generator');
+	// Remove link in the head (RSD, WLW, WP version, etc)
+		remove_action('wp_head', 'rsd_link');
+		remove_action('wp_head', 'wlwmanifest_link');
+		remove_action('wp_head', 'wp_generator');
+		remove_action('wp_head', 'start_post_rel_link');
+		remove_action('wp_head', 'index_rel_link');
+		remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
+		remove_action('wp_head', 'start_post_rel_link');
     
     //add our widgets
     function gobsnack_widgets_init() {
