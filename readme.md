@@ -25,15 +25,15 @@ However, if the theme actually fits most of your needs, and you are making just 
 6. Feed Links
 7. Standard WP Styles ready to be defined in style.css
 8. Custom Background Enabled
-9. Removed WP version along with other not really needed links in the <head>.
+9. Removed WP version along with other not really needed links in the head.
 
 ## Future
 
 1. HTML5?
    This whole HTML5 thing is such a buzz word. I have not included it now, just because for a lot of my B2B clients, they are using IE and are just not ready for it. So I haven't bothered...yet. Doesn't mean I'm not thinking about it.
-   2. Responsiveness?
-   		The intention of theme is for people to define their own breaking points. Build on top of this. The theme is just a skeleton, so this is where you step in and add your own grids or whatever else you want to. The last thing I wanted to do was add a bunch of frameworks that people do not use or are not familiar with, and are wasting productive time stripping things out.
-   		3. More functions? This is where you let me know what I'm missing out on.
+2. Responsiveness?
+   The intention of theme is for people to define their own breaking points. Build on top of this. The theme is just a skeleton, so this is where you step in and add your own grids or whatever else you want to. The last thing I wanted to do was add a bunch of frameworks that people do not use or are not familiar with, and are wasting productive time stripping things out.
+3. More functions? This is where you let me know what I'm missing out on.
 
 ## Requests
 
