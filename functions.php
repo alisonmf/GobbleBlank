@@ -13,7 +13,10 @@
 			)
 		);
 	
-	//custom background support for client
+	// Feed links for head
+	add_theme_support( 'automatic-feed-links' );
+	
+	// Custom background support for client
 	add_theme_support( 'custom-background' );
 	
 	//pulls the main stylesheet for the wysiwyg editor for client
