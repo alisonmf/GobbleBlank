@@ -37,7 +37,7 @@ However, if the theme actually fits most of your needs, and you are making just 
 
 ## Requests
 
-Feel free to send requests, tickets, etc on github.
+Feel free to send requests, tickets, etc on GitHub.
 
 
 
