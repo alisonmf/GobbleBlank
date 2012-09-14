@@ -1,6 +1,6 @@
 		<div id="footer">
 		
-				<ul id="footer-menu">			
+				<ul id="footer-menu" class="print">			
 					<?php wp_nav_menu( array( 'theme_location' => 'menu-footer', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>					
 				</ul>
 				

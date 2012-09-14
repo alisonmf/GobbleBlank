@@ -25,7 +25,8 @@ However, if the theme actually fits most of your needs, and you are making just 
 6. Feed Links
 7. Standard WP Styles ready to be defined in style.css
 8. Custom Background Enabled
-9. Removed WP version along with other not really needed links in the head.
+9. Removed WP version along with other not really needed links in the head
+10. Basic print styles added (removes navigation menus, appends link paths)
 
 ## Future
 

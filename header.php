@@ -30,6 +30,7 @@
 	<!-- CSS/LINKS -->
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />	
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/print.css" type="text/css" media="print" />	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
@@ -49,7 +50,7 @@
 			
 			<div class="description"><?php bloginfo('description'); ?></div>
 			
-			<ul id="main-menu">
+			<ul id="main-menu" class="print">
 				<?php wp_nav_menu( array( 'theme_location' => 'menu-main', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
 			</ul>
 			
