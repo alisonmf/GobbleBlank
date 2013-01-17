@@ -1,0 +1,70 @@
+/*   
+Theme Name: GobbleBlank
+Theme URI: http://gobblelogic.com
+Description: Blank Starter WordPress Theme
+Author: Gobble Logic
+Author URI: http://gobblelogic.com
+Version: .7
+Github: https://github.com/gobblelogic/GobbleBlank/
+
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+GobbleBlank Theme, Copyright (c) 2012 GobbleLogic.com
+*/
+
+@import "normalize";
+@import "menu";
+
+/* @group Basic Type */
+
+html {font: 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;}
+
+h1,h2,h3,h,h5,h6 { margin: 1em 0; }
+
+strong 	{ font-weight: bold; }
+em 		{ font-style: italic; }
+
+
+/* @end group*/
+
+/* @group Basic List Styles */
+
+#content ol, #content ul 	{ margin: 1em 2em; }
+#content ul 				{ list-style-type: square; }
+#content ol 				{ list-style-type: decimal; }
+
+/* @end group */
+
+/* @group Layout */
+
+#wrapper { margin: 0 auto; width: 85%; max-width: 1150px; }
+
+#header {}
+
+/* @end group */
+
+/* @group WP */
+
+.alignright 		{float: right;}
+.alignleft 			{float: left;}
+.aligncenter 		{clear: both; margin: 0 25%;}
+
+.wp-caption			{  }
+.wp-caption-text	{  }
+.gallery-caption	{  }
+
+.sticky				{  }
+
+.bypostauthor		{  }
+
+/* @end group WP */
+
+
+/* @group General */
+
+.right 	{float: right;}
+.left 	{float: left;}
+.clear 	{clear: both;}
+
+/* @end group */

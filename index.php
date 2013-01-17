@@ -18,8 +18,6 @@
 
 		</div>
 		
-		<?php comment_form(); ?>
-
 	<?php endwhile; else : endif; ?>
 	
 	</div>
