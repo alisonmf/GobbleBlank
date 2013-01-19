@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div id="content">
+	<div class="content">
 	
 		<?php if (have_posts()) : ?>
 
@@ -35,7 +35,7 @@
 			
 				<div <?php post_class() ?>>
 				
-						<h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+						<h2 class="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 					
 						<?php get_template_part('meta'); ?>
 

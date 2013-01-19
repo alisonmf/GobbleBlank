@@ -1,10 +1,10 @@
-		<div id="footer">
+		<div class="footer">
 		
-				<ul id="footer-menu" class="print">			
+				<ul class="footer-menu" class="print">			
 					<?php wp_nav_menu( array( 'theme_location' => 'menu-footer', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>					
 				</ul>
 				
-				<span id="copyright">&copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?></span>
+				<span class="copyright">&copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?></span>
 				
 		</div><!-- /#footer -->
 

@@ -12,7 +12,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 GobbleBlank Theme, Copyright (c) 2012 GobbleLogic.com
 */
-/* normalize.css v1.0.0 | MIT License | git.io/normalize */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -205,12 +204,12 @@ table {
 /* Level Two */
 /* Level Three */
 /* Footer Menu */
-/* @group Basic Type */
 html {
   font: 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; }
 
 h1, h2, h3, h, h5, h6 {
-  margin: 1em 0; }
+  margin: 1em 0;
+  font-family: Georgia, Times, serif; }
 
 strong {
   font-weight: bold; }
@@ -218,26 +217,20 @@ strong {
 em {
   font-style: italic; }
 
-/* @end group*/
-/* @group Basic List Styles */
-#content ol, #content ul {
+.content ol, #content ul {
   margin: 1em 2em; }
 
-#content ul {
+.content ul {
   list-style-type: square; }
 
-#content ol {
+.content ol {
   list-style-type: decimal; }
 
-/* @end group */
-/* @group Layout */
-#wrapper {
+.wrapper {
   margin: 0 auto;
   width: 85%;
   max-width: 1150px; }
 
-/* @end group */
-/* @group WP */
 .alignright {
   float: right; }
 
@@ -248,8 +241,6 @@ em {
   clear: both;
   margin: 0 25%; }
 
-/* @end group WP */
-/* @group General */
 .right {
   float: right; }
 
@@ -258,5 +249,3 @@ em {
 
 .clear {
   clear: both; }
-
-/* @end group */

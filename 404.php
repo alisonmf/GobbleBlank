@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div id="content">
+	<div class="content">
 
 		<h2>Gobble Gobble Gobble. We don't know what happened. We just Gobble. Gobble Gobble Gobble.</h2>
 		

@@ -42,15 +42,15 @@
 
 <body <?php body_class(); ?>>
 	
-	<div id="wrapper">
+	<div class="wrapper">
 
-		<div id="header">
+		<div class="header">
 		
 			<a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
 			
 			<div class="description"><?php bloginfo('description'); ?></div>
 			
-			<ul id="main-menu" class="print">
+			<ul class="main-menu" class="print">
 				<?php wp_nav_menu( array( 'theme_location' => 'menu-main', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
 			</ul>
 			
