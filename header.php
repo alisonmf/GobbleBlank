@@ -30,6 +30,12 @@
 	<!-- CSS/LINKS -->
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />	
+<!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/mediaqueries.css" type="text/css" />	
+    <!-- iPhone 4 --> 
+    <link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5)" href="<?php bloginfo('stylesheet_directory'); ?>/css/iphone4.css" type="text/css" />		
+    <!-- -->
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/ie.css" type="text/css" media="print" />	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/print.css" type="text/css" media="print" />	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
