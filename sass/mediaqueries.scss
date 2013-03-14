@@ -2,9 +2,54 @@
 @media screen and (max-width: 1224px) {}
 @media screen and (max-width: 1124px) {}
 @media screen and (max-width: 1024px) {}
-@media screen and (max-width: 960px)  {}
-@media screen and (max-width: 768px)  {}
-@media screen and (max-width: 640px)  {}
+@media screen and (max-width: 960px)  {
+
+    .home {
+    
+        background-color:red !important;
+    
+    }
+    .wrapper {}
+    .header {}
+    .main-menu {}
+    .menu {}
+    .page-item {}
+    .content {}
+    .post {}
+    .meta {}
+    .entry {}
+    .sidebar {}
+    .widget {}
+    .footer {}
+    .footer-menu {}
+    .menu {}
+    .post {}
+    .post {}
+    .copyright {
+    
+        color:red !important;
+    
+    }
+}
+@media screen and (max-width: 768px)  {
+
+
+    .home {
+    
+        background-color:white !important;
+    
+    }
+
+}
+@media screen and (max-width: 640px)  {
+
+
+    .home {
+    
+        background-color:gray !important;
+    
+    }
+}
 @media screen and (max-width: 524px)  {}
 @media screen and (max-width: 480px)  {}
 @media screen and (max-width: 320px)  {}

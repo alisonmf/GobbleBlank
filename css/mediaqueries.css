@@ -1,0 +1,12 @@
+@media screen and (max-width: 960px) {
+  .home {
+    background-color: red !important; }
+
+  .copyright {
+    color: red !important; } }
+@media screen and (max-width: 768px) {
+  .home {
+    background-color: white !important; } }
+@media screen and (max-width: 640px) {
+  .home {
+    background-color: gray !important; } }
