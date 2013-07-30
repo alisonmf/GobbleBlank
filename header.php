@@ -46,12 +46,8 @@
 
 		<div class="header">
 		
-			<a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
+			<a href="<?php echo home_url(); ?>/"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" /></a>						
 			
-			<div class="description"><?php bloginfo('description'); ?></div>
-			
-			<ul class="main-menu" class="print">
-				<?php wp_nav_menu( array( 'theme_location' => 'menu-main', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
-			</ul>
+			<?php wp_nav_menu( array( 'theme_location' => 'menu-main', 'items_wrap' => '%3$s' ) ); ?>
 			
 		</div><!-- /#header -->
