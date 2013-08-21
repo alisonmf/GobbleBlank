@@ -48,6 +48,8 @@
 		
 			<a class="logo" href="<?php echo home_url(); ?>/"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" /></a>						
 			
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-main', 'items_wrap' => '%3$s' ) ); ?>
+			<ul>
+				<?php wp_nav_menu( array( 'theme_location' => 'menu-main', 'items_wrap' => '%3$s' ) ); ?>
+			</ul>
 			
 		</div><!-- /#header -->

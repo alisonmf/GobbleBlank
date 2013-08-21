@@ -13,6 +13,13 @@
 			)
 		);
 	
+	//remove the menu div container
+	function my_wp_nav_menu_args( $args = '' ) {
+		$args['container'] = false;
+		return $args;
+	}
+	add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' );
+	
 	// Feed links for head
 	add_theme_support( 'automatic-feed-links' );
 	
