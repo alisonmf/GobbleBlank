@@ -32,8 +32,9 @@
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/print.css" type="text/css" media="print" />	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
-	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
+	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); wp_enqueue_script( 'jquery' ); ?>
 		
 	<!-- JS -->
 	<?php wp_head(); ?>
