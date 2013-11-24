@@ -1,5 +1,0 @@
-.print {display: none;}
-
-#content a:link:after { content: " (" attr(href) ") "; }
-
-a {font-weight: bold; text-decoration: underline;}
