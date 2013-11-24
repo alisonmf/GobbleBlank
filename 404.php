@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-	<div class="content">
+	<div class="container span-12">
 
-		<h2>Oops! What happened?</h2>
+		<h2>Oh no! We can't find anything for you. :(</h2>
 		
 		<p>We can't find the page you are looking for. Return <a href="<?php echo home_url(); ?>">Home</a>?</p>
 	
