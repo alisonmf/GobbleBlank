@@ -32,7 +32,7 @@
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
 	add_theme_support( 'post-thumbnails' );
 	
-	// Remove link in the head (RSD, WLW, WP version, etc)
+	// Remove link in the head (RSD, WLW, WP version, etc for security purposes)
 		remove_action('wp_head', 'rsd_link');
 		remove_action('wp_head', 'wlwmanifest_link');
 		remove_action('wp_head', 'wp_generator');
@@ -45,19 +45,19 @@
     function gobsnack_widgets_init() {
     
     	register_sidebar( array(
-    		'name' => __( 'Main Sidebar' ),
-    		'id' => 'sidebar-main',
+    		'name' => __( 'Blog Sidebar' ),
+    		'id' => 'sidebar-blog',
     		'description' => __( 'The sidebar is your main sidebar' ),
     		'before_widget' => '<div id="%1$s" class="widget %2$s">',
     		'after_widget' => "</div>",
     		'before_title' => '<h3 class="widget-title">',
     		'after_title' => '</h3>',
     	) );
-    
-    	register_sidebar( array(
-    		'name' => __( 'Other Sidebar' ),
-    		'id' => 'sidebar-other',
-    		'description' => __( 'The sidebar is for extra content' ),
+		
+		register_sidebar( array(
+    		'name' => __( 'Page Sidebar' ),
+    		'id' => 'sidebar-page',
+    		'description' => __( 'The sidebar is your main sidebar' ),
     		'before_widget' => '<div id="%1$s" class="widget %2$s">',
     		'after_widget' => "</div>",
     		'before_title' => '<h3 class="widget-title">',
@@ -66,30 +66,6 @@
     
     }
     add_action( 'widgets_init', 'gobsnack_widgets_init' );    
-    
-    
-    // Adds a menu class to the first and last child for your dynamic menus, useful for pipes/dividers and such    	
-/*
-	function add_first_and_last($output) {
-	  $output = preg_replace('/class="menu-item/', 'class="first-menu-item menu-item', $output, 1);
-	  $output = substr_replace($output, 'class="last-menu-item menu-item', strripos($output, 'class="menu-item'), strlen('class="menu-item'));
-	  return $output;
-	}
-	add_filter('wp_nav_menu', 'add_first_and_last');
-*/
-    
-    // iframe support in tincymce (mostly for vimeo video support)
-    function mytheme_tinymce_config( $init ) {
-	$valid_iframe = 'iframe[id|class|title|style|align|frameborder|height|longdesc|marginheight|marginwidth|name|scrolling|src|width]';
-	if ( isset( $init['extended_valid_elements'] ) ) {
-		$init['extended_valid_elements'] .= ',' . $valid_iframe;
-		
-	} else {
-		$init['extended_valid_elements'] = $valid_iframe;
-	}
-	
-	return $init;
-	}
-	add_filter('tiny_mce_before_init', 'mytheme_tinymce_config');
+  
 
 ?>
