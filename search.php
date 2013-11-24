@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div class="content">
+	<div class="content span-8">
 
 	<?php if (have_posts()) : ?>
 
@@ -32,8 +32,12 @@
 
 	<?php endif; ?>
 
-	<?php get_sidebar(); ?>
-
+	</div>
+	
+	<div class="sidebar span-4">
+	
+		<?php get_sidebar(); ?>
+		
 	</div>
 
 <?php get_footer(); ?>
