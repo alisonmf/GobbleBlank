@@ -4,7 +4,7 @@ Theme URI: http://gobblelogic.com
 Description: Blank Starter WordPress Theme
 Author: Gobble Logic
 Author URI: http://gobblelogic.com
-Version: .7
+Version: .8
 Github: https://github.com/gobblelogic/GobbleBlank/
 
 License: GNU General Public License v2.0
@@ -12,28 +12,25 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 GobbleBlank Theme, Copyright (c) 2012 GobbleLogic.com
 */
-
 @import "normalize";
-@import "menu";
 
 $body-copy: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 $headlines: Georgia, Times, serif;
 
 html {font: 1em/1.5em $body-copy;}
 
+@import "menu";
+@import "comments";
+@import "wysiwyg";
+@import "formats";
+
 h1,h2,h3,h,h5,h6 { margin: 1em 0; font-family: $headlines; }
 
 strong 	{ font-weight: bold; }
 em 		{ font-style: italic; }
 
-.content ol, #content ul 	{ margin: 1em 2em; }
-.content ul 				{ list-style-type: square; }
-.content ol 				{ list-style-type: decimal; }
-
 
 .wrapper { margin: 0 auto; width: 85%; max-width: 1150px; }
-
-.header {}
 
 .alignright 		{float: right;}
 .alignleft 			{float: left;}
