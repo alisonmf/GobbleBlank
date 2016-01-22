@@ -1,0 +1,32 @@
+// Primary colors
+
+$primary-color: 								#4eb25d;
+$secondary-color: 								#292929;
+$red: 											#b20000;
+$w: 											#fff;
+$b: 											#000;
+
+$grey-darker:									lighten($b, 13.5%); // #222
+$grey-dark:										lighten($b, 20%);   // #333
+$grey:											lighten($b, 33.5%); // #555
+$grey-light:									lighten($b, 60%);   // #999
+$grey-lighter:									lighten($b, 93.5%); // #eee
+
+// fontface (place fonts folder in css only)
+// @include font-face(Avenir, 'css/fonts/AvenirLTStd-Black', normal);
+// @include font-face(Avenir, 'css/fonts/AvenirLTStd-BlackOblique', normal, oblique);
+// @include font-face(Avenir, 'css/fonts/AvenirLTStd-Medium', normal);
+// @include font-face(Avenir, 'css/fonts/AvenirLTStd-MediumOblique', normal, oblique);
+
+// typo
+$sans-serif: 									sans-serif;
+$serif: 										serif;
+$fontawesome:									"Font Awesome", sans-serif;
+
+//
+$body-copy: 									$sans-serif;
+$headlines: 									$serif;
+
+// Links
+$link-color:            						$primary-color;
+$link-hover-color:      						darken($primary-color, 15%);

@@ -1,43 +1,30 @@
 <?php get_header(); ?>
 
-	<div class="content span-8">
+	<div class="span-8">
 
-	<?php if (have_posts()) : ?>
+			<?php if ( have_posts() ): ?>
+				<h2>Search Results for '<?php echo get_search_query(); ?>'</h2>
+				<ol>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<li>
+						<article>
+							<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+							<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
+							<?php the_content(); ?>
+						</article>
+					</li>
+				<?php endwhile; ?>
+				</ol>
+				<?php else: ?>
+				<h2>No results found for '<?php echo get_search_query(); ?>'</h2>
+			<?php endif; ?>
 
-		<h2>Search Results</h2>
+		</div><!-- /.span-8 -->
 
-		<?php get_template_part('nav'); ?>
+	<div class="sidebar span-4 omega">
 
-		<?php while (have_posts()) : the_post(); ?>
-
-			<div <?php post_class() ?> class="post-<?php the_ID(); ?>">
-
-				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-
-				<div class="entry">
-
-					<?php the_excerpt(); ?>
-
-				</div>
-
-			</div>
-
-		<?php endwhile; ?>
-
-		<?php get_template_part('nav'); ?>
-
-	<?php else : ?>
-
-		<h2>No posts found.</h2>
-
-	<?php endif; ?>
-
-	</div>
-	
-	<div class="sidebar span-4">
-	
 		<?php get_sidebar(); ?>
-		
-	</div>
+
+	</div><!-- /.span-4 -->
 
 <?php get_footer(); ?>

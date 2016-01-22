@@ -20,7 +20,7 @@
 .commentlist .vcard img.avatar {}
 .commentlist .vcard cite.fn a.url {}
 
-.commentlist .comment-meta {} 
+.commentlist .comment-meta {}
 .commentlist .comment-meta a {}
 .commentlist .commentmetadata {}
 .commentlist .commentmetadata a {}
@@ -41,7 +41,7 @@
 .commentlist li ul.children li.alt {}
 .commentlist li ul.children li.byuser {}
 .commentlist li ul.children li.comment {}
-.commentlist li ul.children li.depth-{id} {}
+//.commentlist li ul.children li.depth-{id} {}
 .commentlist li ul.children li.bypostauthor {}
 .commentlist li ul.children li.comment-author-admin {}
 
@@ -50,20 +50,20 @@
 
 //Comment Form
 
-#respond { } 
-#reply-title { } 
+#respond { }
+#reply-title { }
 #cancel-comment-reply-link { }
-#commentform { } 
-#author { } 
-#email { } 
-#url { } 
-#comment 
+#commentform { }
+#author { }
+#email { }
+#url { }
+#comment
 #submit
-.comment-notes { } 
+.comment-notes { }
 .required { }
 .comment-form-author { }
-.comment-form-email { } 
+.comment-form-email { }
 .comment-form-url { }
-.comment-form-comment { } 
-.form-allowed-tags { } 
-.form-submit
+.comment-form-comment { }
+.form-allowed-tags { }
+.form-submit { }

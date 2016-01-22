@@ -1,0 +1,80 @@
+
+
+// width for .container
+$w1200: 1200px;
+$w1140: 1140px;
+$w1000: 1000px;
+
+// highlight
+::selection { background:#c5d7eb; color:#3572cb; text-shadow:none; }
+::-moz-selection { background:#c5d7eb; color:#3572cb; text-shadow:none; }
+::-webkit-selection { background:#c5d7eb; color:#3572cb; text-shadow:none; }
+
+// no margin/padding so use `@extend .zero` to apply on ol, ul for example...
+.zero {margin:0;padding:0;}
+
+// WP align
+.alignright 			{float: right;}
+.alignleft 				{float: left;}
+.aligncenter 			{clear: both; margin: 0 25%;}
+
+// if you prefer old fasion way for PHP ;)
+.right 	{float: right;}
+.left 	{float: left;}
+.clear 	{@include clearfix;}
+
+// img will be centered by default without class
+.img-right 				{float: right; margin: 0 0 15px 15px;}
+.img-left 				{float: right; margin: 0 15px 15px 0;}
+
+// For faster mobile-friendly development, use these utility classes for showing and hiding content by device via media query.
+.mobile {
+	display: none !important;
+	@include max-width(480px) {
+		display: block !important;
+	}
+}
+
+.tablet {
+	display: none !important;
+	@include max-width(768px) {
+		display: block !important;
+	}
+}
+
+.desktop {
+	display: block !important;
+	@include max-width(768px) {
+		display: none !important;
+	}
+}
+
+// button
+.btn {
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: none;
+	border: 2px solid transparent;
+	padding: 6px 12px;
+	font-size: 14px;
+	color: $w;
+	text-decoration: none;
+
+	@include border-top-radius(6px);
+	@include border-bottom-radius(6px);
+	@include user-select(none);
+
+}
+
+
+
+// other WP stuffs
+.wp-caption				{  }
+.wp-caption-text	{  }
+.gallery-caption	{  }
+.sticky						{  }
+.bypostauthor			{  }

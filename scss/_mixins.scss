@@ -1,0 +1,22 @@
+// write your own mixins
+
+@mixin unformatted-list{
+  list-style: none;
+  &, li{
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@mixin underline-on-hover{
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+// use @extend .zero for any div or ul,ol, etc.
+@mixin zero {
+	margin:0;
+	padding:0;
+}

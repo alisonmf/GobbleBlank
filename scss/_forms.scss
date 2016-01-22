@@ -1,0 +1,43 @@
+fieldset {
+  @include zero;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 20px;
+  line-height: inherit;
+  color: $grey;
+  border: 0;
+  border-bottom: 1px solid $grey;
+}
+
+#{$all-text-inputs}, textarea {
+  //border: 1px solid green;
+}
+
+#{$all-text-inputs-hover}, textarea:hover { // Target the :hover pseudo-class
+  //background: $primary-color;
+}
+
+#{$all-text-inputs-focus}, textare:focus { // Target the :focus pseudo-class
+  background: white;
+}
+
+textarea {
+	resize: vertical;
+}
+
+#{$all-text-inputs}, textarea, select {
+	// or add box-shadow inset instead of default OS color...
+	outline: none;
+}
+
+// Use fontawesome search for search
+input[type=search]::-webkit-input-placeholder::before { font-family: $fontawesome; content:'\f002  ';}
+input[type=search]::-moz-placeholder::before  { font-family: $fontawesome; content:'\f002  ';}
+input[type=search]:-ms-input-placeholder::before  { font-family: $fontawesome; content:'\f002  ';}
+input[type=search]:-moz-placeholder::before  { font-family: $fontawesome; content:'\f002  ';}

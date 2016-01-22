@@ -1,50 +1,76 @@
-/*   
-Theme Name: GobbleBlank
+/*!
+Theme Name: GobbleBlank 2
 Theme URI: http://gobblelogic.com
 Description: Blank Starter WordPress Theme
 Author: Gobble Logic
 Author URI: http://gobblelogic.com
-Version: .8
+Version: 2
 Github: https://github.com/gobblelogic/GobbleBlank/
 
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-GobbleBlank Theme, Copyright (c) 2012 GobbleLogic.com
+GobbleBlank Theme, Copyright (c) 2014 GobbleLogic.com
+
+Special thanks to Aaron Hall (@llahnoraa) for integrating
+bourbon and neat.
 */
+
+
+// HTML5 alternative to a reset css: https://github.com/necolas/normalize.css
 @import "normalize";
 
-$body-copy: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-$headlines: Georgia, Times, serif;
+// Bourbon: SASS Mixin library
+// https://github.com/thoughtbot/bourbon
+@import "bourbon/bourbon";
 
-html {font: 1em/1.5em $body-copy;}
+// Bitters: Scaffold styles, variables and structure for Bourbon projects.
+// http://bitters.bourbon.io
+@import "base/base";
 
+// Neat: Fluid grid framework
+// https://github.com/thoughtbot/neat
+@import "neat/neat";
+@import "neat-settings";
+
+// Custom settings for variables
+@import "variables";
+
+// Custom mixins
+@import "mixins";
+
+// Typography
+@import "font-awesome/font-awesome";
+@import "typography";
+
+// Common
+@import "common";
+
+// Forms and form elements using bourbon
+@import "forms";
+
+// Barebones
 @import "menu";
 @import "comments";
 @import "wysiwyg";
 @import "formats";
+@import "wordpress";
 
-h1,h2,h3,h,h5,h6 { margin: 1em 0; font-family: $headlines; }
+// Do whatever you want to below
+html {-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
 
-strong 	{ font-weight: bold; }
-em 		{ font-style: italic; }
+.container {
+	@include outer-container;
+	// set width of your choice
+	// for more info go to _common.scss and it's on very top
+	max-width: $w1200;
+}
 
-
-.wrapper { margin: 0 auto; width: 85%; max-width: 1150px; }
-
-.alignright 		{float: right;}
-.alignleft 			{float: left;}
-.aligncenter 		{clear: both; margin: 0 25%;}
-
-.wp-caption			{  }
-.wp-caption-text	{  }
-.gallery-caption	{  }
-
-.sticky				{  }
-
-.bypostauthor		{  }
-
-
-.right 	{float: right;}
-.left 	{float: left;}
-.clear 	{clear: both;}
+// logo
+.logo {
+  @include hide-text;
+  background: url(http://placehold.it/350x150);
+  display: block;
+  width: 350px;
+  height: 150px;
+}

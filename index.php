@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div class="content span-8">
+	<div class="span-8">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -11,21 +11,21 @@
 			<?php get_template_part('meta'); ?>
 
 			<div class="entry">
-			
+
 				<?php the_excerpt(); ?>
-				
+
 			</div>
 
 		</div>
-		
+
 	<?php endwhile; else : endif; ?>
-	
+
 	</div>
-	
-	<div class="sidebar span-4">
-		
+
+	<aside class="sidebar span-4 omega">
+
 		<?php get_sidebar(); ?>
-		
-	</div>
+
+	</aside>
 
 <?php get_footer(); ?>

@@ -1,68 +1,92 @@
 <?php get_header(); ?>
 
-	<div class="content">
-	
-		<?php if (have_posts()) : ?>
+	<article class="content span-8">
 
- 			<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
+		<?php 
 
-			<?php /* If this is a category archive */ if (is_category()) { ?>
-				<h1><?php single_cat_title(); ?></h1>
+		if (have_posts()) :  
 
-			<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-				<h1><?php single_tag_title(); ?></h1>
+ 			// hack. Set $post so that the_date() works.
+ 			$post = $posts[0]; 
 
-			<?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-				<h1>Archive for <?php the_time('F jS, Y'); ?></h1>
+			 // if this is a cat archive
 
-			<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-				<h1>Archive for <?php the_time('F, Y'); ?></h1>
+			if (is_category()) { 
+				echo '<h1>'.single_term_title('', false).'</h1>';
+			} 
 
-			<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-				<h1>Archive for <?php the_time('Y'); ?></h1>
+			 // if this is a tag archive
 
-			<?php /* If this is an author archive */ } elseif (is_author()) { ?>
-				<h1>Author Archive</h1>
+			elseif( is_tag() ) { 
+				echo '<h1>'.single_tag_title('', false).'</h1>';
+			}
 
-			<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-				<h1>Blog Archives</h1>
-			
-			<?php } ?>
+			 // if this is a daily archive 
 
-			<?php get_template_part('nav'); ?>
+			elseif (is_day()) { 
+				echo '<h1>Archive for  '.get_the_time('F jS, Y').'</h1>';
+			}
 
-			<?php while (have_posts()) : the_post(); ?>
-			
-				<div <?php post_class() ?>>
-				
-						<h2 class="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-					
-						<?php get_template_part('meta'); ?>
+			// if this is a monthly archive
 
-						<div class="entry">
-							<?php the_excerpt(); ?>
-						</div>
+			elseif (is_month()) { 
+				echo '<h1>Archive for  '.get_the_time('F, Y').'</h1>';
+			}
 
-				</div>
 
-			<?php endwhile; ?>
+			// if this is a yearly archive
 
-			<?php get_template_part('nav'); ?>
-			
-	<?php else : ?>
+			elseif (is_year()) { 
+				echo'<h1>Archive for '.get_the_time('Y').'</h1>';
+			}
 
-		<h1>We don't have anything to show you!</h1>
-		
-		<p>Try going back to the <a href="<?php bloginfo('url'); ?>">home page</a>.</p>
+			 // if this is an author archive
 
-	<?php endif; ?>
+			elseif (is_author()) { 
+				echo'<h1>Author Archive</h1>';
+			}
 
-	</div>
-	
-	<div class="sidebar span-4">
-	
+			 // if this is a paged archive
+
+			elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {
+				echo'<h1>Blog Archives</h1>';
+			}
+
+			//start our loop
+			while (have_posts()) : the_post();
+
+		?>
+
+		<div <?php post_class() ?>>
+
+			<h2>
+				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			</h2>
+
+			<?php get_template_part('meta'); ?>
+
+			<?php the_excerpt(); ?>
+
+		</div>
+
+		<?php endwhile; ?>
+
+		<?php get_template_part('nav'); ?>
+
+		<?php else : ?>
+
+			<h1>We're sorry, we didn't find anything to show you!</h1>
+
+			<p>Try going back to the <a href="<?php bloginfo('url'); ?>">home page</a>.</p>
+
+		<?php endif; ?>
+
+	</article>
+
+	<aside class="sidebar span-4 omega">
+
 		<?php get_sidebar(); ?>
-	
-	</div>
+
+	</aside>
 
 <?php get_footer(); ?>

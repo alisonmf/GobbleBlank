@@ -1,19 +1,37 @@
 <?php get_header(); ?>
 
-	<div class="content">
+	<div class="span-12">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	
-			<div <?php post_class() ?> class="post-<?php the_ID(); ?>">
-	
-				<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
-	
-				<?php the_content(); ?>
-	
+
+			<div class="post-<?php the_ID(); ?>">
+
+				<?php
+				//put your h1 for home page in content area
+
+				the_content();
+				?>
+
 			</div>
-	
+
 		<?php endwhile;  else :  endif; ?>
 
-	</div><!-- /.content -->
+	</div><!-- /.span-12 -->
+
+	<?php
+		// you can get creative here, make custom fields, etc
+	?>
+
+	<div class="span-4">
+		content 1 <i class="fa fa-eye"></i>
+	</div>
+
+	<div class="span-4">
+		content 2 <i class="fa fa-heart"></i>
+	</div>
+
+	<div class="span-4 omega">
+		content 3 <i class="fa fa-globe"></i>
+	</div>
 
 <?php get_footer(); ?>
