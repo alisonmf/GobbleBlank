@@ -12,12 +12,6 @@ $grey:											lighten($b, 33.5%); // #555
 $grey-light:									lighten($b, 60%);   // #999
 $grey-lighter:									lighten($b, 93.5%); // #eee
 
-// fontface (place fonts folder in css only)
-// @include font-face(Avenir, 'css/fonts/AvenirLTStd-Black', normal);
-// @include font-face(Avenir, 'css/fonts/AvenirLTStd-BlackOblique', normal, oblique);
-// @include font-face(Avenir, 'css/fonts/AvenirLTStd-Medium', normal);
-// @include font-face(Avenir, 'css/fonts/AvenirLTStd-MediumOblique', normal, oblique);
-
 // typo
 $sans-serif: 									sans-serif;
 $serif: 										serif;
