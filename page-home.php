@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<div class="container">
+
 	<div class="span-12">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -18,20 +20,6 @@
 
 	</div><!-- /.span-12 -->
 
-	<?php
-		// you can get creative here, make custom fields, etc
-	?>
-
-	<div class="span-4">
-		content 1 <i class="fa fa-eye"></i>
-	</div>
-
-	<div class="span-4">
-		content 2 <i class="fa fa-heart"></i>
-	</div>
-
-	<div class="span-4 omega">
-		content 3 <i class="fa fa-globe"></i>
-	</div>
+</div>
 
 <?php get_footer(); ?>

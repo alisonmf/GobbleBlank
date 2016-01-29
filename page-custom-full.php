@@ -7,6 +7,8 @@ Template Name: Full Width, No Sidebar
 
 <?php get_header(); ?>
 
+<div class="container">
+
 	<article class="span-12">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -22,5 +24,7 @@ Template Name: Full Width, No Sidebar
 		<?php endwhile; endif; ?>
 
 	</article><!-- /.span-12 -->
+
+</div>
 
 <?php get_footer(); ?>

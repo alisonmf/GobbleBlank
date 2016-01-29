@@ -15,9 +15,9 @@
 	<?php
 	
 	//any additional custom scripts may go here
-	get_template_part('scripts'); ?>
+	get_template_part('scripts'); 
 
-	<?php wp_footer(); ?>
+	wp_footer(); ?>
 
 </body>
 

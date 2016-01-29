@@ -1,11 +1,10 @@
-
 <?php
-/*
-Template Name: My Custom Page (Sample)
-*/
-?>
 
-<?php get_header(); ?>
+// Template Name: My Custom Page (Sample)
+
+get_header(); ?>
+
+<div class="container">
 
 	<article class="span-8">
 
@@ -28,5 +27,7 @@ Template Name: My Custom Page (Sample)
 		<?php get_sidebar(); ?>
 
 	</aside>
+
+</div>
 
 <?php get_footer(); ?>
