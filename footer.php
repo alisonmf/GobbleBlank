@@ -1,3 +1,5 @@
+	<div class="container">	
+
 		<footer class="footer span-12">
 
 				<ul class="footer-menu span-8" class="print">
