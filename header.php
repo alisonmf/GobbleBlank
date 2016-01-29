@@ -20,14 +20,14 @@
 	</title>
 
 	<!-- CSS/LINKS -->
-	<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/apple-touch-icon-144x144-precomposed.png" type="image/x-icon" />
+	<link rel='shortcut icon' href='<?php bloginfo('stylesheet_directory'); ?>/apple-touch-icon-144x144-precomposed.png' type='image/x-icon' />
 	<link rel='apple-touch-icon' href='<?php bloginfo('stylesheet_directory'); ?>/apple-touch-icon-144x144-precomposed.png'>
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/print.css" type="text/css" media="print" />
-	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+	<link rel='stylesheet' href='<?php bloginfo('stylesheet_url'); ?>' type='text/css' />
+	<link rel='stylesheet' href='<?php bloginfo('stylesheet_directory'); ?>/css/print.css' type='text/css' media='print' />
+	<link rel='pingback' href='<?php bloginfo('pingback_url'); ?>' />
 
 	<!-- FONTS -->
-	<link href='http://fonts.googleapis.com/css?family=Lusitana:400,700|Merriweather:400,300,300italic,400italic,700,700italic,900,900italic|Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Lusitana:400,700|Merriweather:400,300,300italic,400italic,700,700italic,900,900italic|Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic' rel='stylesheet' type='text/css'>
 
 	<?php
 
@@ -38,7 +38,7 @@
 	<!-- JS -->
 	<script src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
 
-	<?php wp_head(); //outputs all the plugins included front end scripts and styles?>
+	<?php wp_head(); ?>
 
 </head>
 
