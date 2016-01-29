@@ -31,11 +31,6 @@
 
 	<?php
 
-		//emqueue the comment reply string for single posts
-		if (is_singular()) {
-			wp_enqueue_script( 'comment-reply' );
-		}
-
 		//enqueue jquery
 		wp_enqueue_script( 'jquery' );
 	?>
@@ -51,18 +46,24 @@
 
 	<div class="container">
 
-		<header class="header">
+		<header>
 
 			<div class="span-6">
-				<a class="logo" href="<?php echo home_url(); ?>/">GobbleBlank2</a>
+
+				<a href="<?php echo home_url(); ?>/">Gobble Blank</a>
+
 			</div><!-- /.span-6 -->
 
 			<div class="span-6 omega">
+
 				<ul class="main-menu">
 					<?php
 					//be sure to define your menus in the admin area for this to function correctly!
 					wp_nav_menu( array( 'theme_location' => 'menu-main', 'items_wrap' => '%3$s' ) ); ?>
 				</ul>
-			</div><!-- /.span-6 -->
 
-		</header><!-- /.header -->
+			</div>
+
+		</header>
+
+	</div>

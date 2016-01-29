@@ -65,12 +65,3 @@ html {-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
 	// for more info go to _common.scss and it's on very top
 	max-width: $w1200;
 }
-
-// logo
-.logo {
-  @include hide-text;
-  background: url(http://placehold.it/350x150);
-  display: block;
-  width: 350px;
-  height: 150px;
-}
