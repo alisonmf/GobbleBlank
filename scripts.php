@@ -4,4 +4,4 @@
 
 ?>
 
-<script src="<?php bloginfo('template_url'); ?>/js/retina-1.1.0.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/retina.min.js"></script>
