@@ -18,7 +18,7 @@
 
 	</article><!-- /.content -->
 
-	<aside class="sidebar span-4 omega">
+	<aside class="sidebar span-4 omega print">
 
 		<?php get_sidebar(); ?>
 
