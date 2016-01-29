@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<div class="container">
+
 	<div class="content span-8">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -27,10 +29,12 @@
 
 	</div>
 
-	<aside class="sidebar span-4 omega">
+	<aside class="sidebar span-4 omega print">
 
 		<?php get_sidebar(); ?>
 
 	</aside>
+
+</div>
 
 <?php get_footer(); ?>

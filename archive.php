@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<div class="container">
+
 	<article class="content span-8">
 
 		<?php 
@@ -83,10 +85,12 @@
 
 	</article>
 
-	<aside class="sidebar span-4 omega">
+	<aside class="sidebar span-4 omega print">
 
 		<?php get_sidebar(); ?>
 
 	</aside>
+
+</div>
 
 <?php get_footer(); ?>

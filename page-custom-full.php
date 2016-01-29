@@ -1,11 +1,8 @@
-
 <?php
-/*
-Template Name: Full Width, No Sidebar
-*/
-?>
 
-<?php get_header(); ?>
+// Template Name: Full Width, No Sidebar
+
+get_header(); ?>
 
 <div class="container">
 
