@@ -63,7 +63,7 @@
 		wp_register_script('modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js');
 		wp_enqueue_script('modernizr');
 
-		wp_register_script('retinajs', get_template_directory_uri() . '/js/retina.js');
+		wp_register_script('retinajs', get_template_directory_uri() . '/js/retina.min.js');
 		wp_enqueue_script('retinajs');
 
 		wp_register_script('smartmenus', get_template_directory_uri() . '/js/jquery.smartmenus.js');

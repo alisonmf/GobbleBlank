@@ -18,7 +18,8 @@ bourbon and neat in version 2.
 */
 
 
-// HTML5 alternative to a reset css: https://github.com/necolas/normalize.css
+// HTML5 alternative to a reset css
+// https://github.com/necolas/normalize.css
 @import "normalize";
 
 // Bourbon: SASS Mixin library
@@ -52,6 +53,9 @@ bourbon and neat in version 2.
 
 // Barebones
 @import "menu";
+
+// RetinaJS
+@import "retina";
 
 // Do whatever you want to below
 html {-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
