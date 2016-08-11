@@ -23,6 +23,8 @@
 
 		</article>
 
+		<?php posts_nav_link(); ?>
+
 		<?php comments_template(); ?>
 
 		<?php endwhile; endif; ?>

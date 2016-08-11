@@ -15,10 +15,10 @@
 	<title><?php wp_title(); ?></title>
 
 	<!-- CSS/LINKS -->
-	<link rel='shortcut icon' href='<?php bloginfo('stylesheet_directory'); ?>/apple-touch-icon-144x144-precomposed.png' type='image/x-icon' />
-	<link rel='apple-touch-icon' href='<?php bloginfo('stylesheet_directory'); ?>/apple-touch-icon-144x144-precomposed.png'>
+	<link rel='shortcut icon' href='<?php echo esc_url(get_stylesheet_directory_uri()) ; ?>/apple-touch-icon-144x144-precomposed.png' type='image/x-icon' />
+	<link rel='apple-touch-icon' href='<?php echo esc_url(get_stylesheet_directory_uri()); ?>/apple-touch-icon-144x144-precomposed.png'>
 	<link rel='stylesheet' href='<?php bloginfo('stylesheet_url'); ?>' type='text/css' />
-	<link rel='stylesheet' href='<?php bloginfo('stylesheet_directory'); ?>/css/print.css' type='text/css' media='print' />
+	<link rel='stylesheet' href='<?php echo esc_url(get_stylesheet_directory_uri()); ?>/css/print.css' type='text/css' media='print' />
 	<link rel='pingback' href='<?php bloginfo('pingback_url'); ?>' />
 
 	<?php wp_head(); ?>

@@ -20,6 +20,8 @@
 
 		</div>
 
+		<?php get_template_part('nav'); ?>
+
 	<?php endwhile; else : endif; ?>
 
 	</div>

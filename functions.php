@@ -7,7 +7,7 @@
 	// WordPress specific support
 	add_theme_support( 'menus' );
 	add_theme_support( 'custom-background' );
-	add_theme_support( 'post-formats' )
+	//add_theme_support( 'post-formats' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'custom-logo' );
@@ -74,6 +74,8 @@
 
 		wp_register_script('fitvid', get_template_directory_uri() . '/js/jquery.fitvids.js');
 		wp_enqueue_script('fitvid');
+
+		if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
 		//custom js functions
 		// wp_register_script('gob_functions', get_template_directory_uri() . '/js/functions.js');
