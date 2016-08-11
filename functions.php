@@ -72,14 +72,11 @@
 		wp_register_script('smartmenus_keyboard', get_template_directory_uri() . '/js/jquery.smartmenus.keyboard.js');
 		wp_enqueue_script('smartmenus_keyboard');
 
-		wp_register_script('fitvid', get_template_directory_uri() . '/js/jquery.fitvids.js');
-		wp_enqueue_script('fitvid');
-
 		if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
 		//custom js functions
-		// wp_register_script('gob_functions', get_template_directory_uri() . '/js/functions.js');
-		// wp_enqueue_script('gob_functions');
+		wp_register_script('gob_functions', get_template_directory_uri() . '/js/functions-min.js');
+		wp_enqueue_script('gob_functions');
 
 		//styles
 		wp_enqueue_style( 'googlefonts', '//fonts.googleapis.com/css?family=Lusitana:400,700|Merriweather:400,300,300italic,400italic,700,700italic,900,900italic|Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic');

@@ -31,22 +31,26 @@
 
 		<header>
 
-			<div class="span-6">
+			<div class="span-3">
 
 				<a href="<?php echo home_url(); ?>/">Gobble Blank</a>
 
 			</div><!-- /.span-6 -->
 
-			<div class="span-6 omega">
+			<div class="span-9 omega">
 
-				<ul class="main-menu">
+				<nav id="main-nav" role="navigation">
 
-					<?php
-						//be sure to define your menus in the admin area for this to function correctly!
-						wp_nav_menu( array( 'theme_location' => 'menu-main', 'items_wrap' => '%3$s' ) );
-					?>
+					<ul id="main-menu" class="sm sm-simple">
 
-				</ul>
+						<?php
+							//be sure to define your menus in the admin area for this to function correctly!
+							wp_nav_menu( array( 'theme_location' => 'menu-main', 'items_wrap' => '%3$s' ) );
+						?>
+
+					</ul>
+
+				</nav>
 
 			</div>
 
