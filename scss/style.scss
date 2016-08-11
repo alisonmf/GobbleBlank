@@ -43,7 +43,7 @@ bourbon and neat in version 2.
 @import "font-awesome/font-awesome";
 @import "typography";
 
-// Common
+// Common classes
 @import "common";
 
 // Forms and form elements using bourbon
@@ -51,10 +51,6 @@ bourbon and neat in version 2.
 
 // Barebones
 @import "menu";
-@import "comments";
-@import "wysiwyg";
-@import "formats";
-@import "wordpress";
 
 // Do whatever you want to below
 html {-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
