@@ -4,15 +4,24 @@
 	// "large" images will be set to the below value
 	if ( ! isset( $content_width ) ) $content_width = 800;
 
-	// Menu support
+	// WordPress specific support
 	add_theme_support( 'menus' );
+	add_theme_support( 'custom-background' );
+	add_theme_support( 'post-formats' )
+	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'custom-logo' );
+	add_theme_support( 'title-tag' );
+	add_theme_support( 'customize-selective-refresh-widgets' );
+	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 
-		register_nav_menus(
-			array(
-			'menu-main' => __( 'Top Navigation' ),
-			'menu-footer' => __( 'Footer Navigation' )
-			)
-		);
+	//navigation support
+	register_nav_menus(
+		array(
+		'menu-main' => __( 'Top Navigation' ),
+		'menu-footer' => __( 'Footer Navigation' )
+		)
+	);
 
 	//remove the menu div container
 	function my_wp_nav_menu_args( $args = '' ) {
@@ -21,17 +30,8 @@
 	}
 	add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' );
 
-	// Feed links for head
-	add_theme_support( 'automatic-feed-links' );
-
-	// Custom background support for client
-	add_theme_support( 'custom-background' );
-
 	// Pulls the main stylesheet for the wysiwyg editor for client
 	add_editor_style('style.css');
-
-	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
-	add_theme_support( 'post-thumbnails' );
 
 	// Remove link in the head (RSD, WLW, WP version, etc for security purposes)
 	remove_action('wp_head', 'rsd_link');
