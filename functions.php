@@ -75,7 +75,7 @@
 		if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
 		//custom js functions
-		wp_register_script('gob_functions', get_template_directory_uri() . '/js/functions-min.js');
+		wp_register_script('gob_functions', get_template_directory_uri() . '/js/functions.min.js');
 		wp_enqueue_script('gob_functions');
 
 		//styles

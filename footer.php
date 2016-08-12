@@ -1,4 +1,4 @@
-	<div class="container">
+	</div><!-- /.page-container -->
 
 		<footer class="footer span-12">
 
@@ -11,12 +11,10 @@
 				<div class="span-4 omega">
 
 					<span class="copyright">&copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?></span>
-					
+
 				</div><!-- /.span-4 -->
 
 		</footer><!-- /.footer -->
-
-	</div><!-- /.container -->
 
 	<?php wp_footer(); ?>
 

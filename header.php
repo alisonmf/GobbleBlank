@@ -27,7 +27,7 @@
 
 <body <?php body_class();?>>
 
-	<div class="container">
+	<div class="page-container">
 
 		<header>
 
@@ -55,5 +55,3 @@
 			</div>
 
 		</header>
-
-	</div>

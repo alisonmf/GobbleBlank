@@ -6,3 +6,13 @@ jQuery(function() {
     subIndicators: false
   });
 });
+
+jQuery(document).ready(function(){
+  jQuery(window).resize(function(){
+      var footerHeight = jQuery('.footer').outerHeight();
+
+      jQuery('.page-container').css({'marginBottom':'-' + footerHeight + 'px'});
+    });
+
+    jQuery(window).resize();
+});

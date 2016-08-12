@@ -58,11 +58,21 @@ bourbon and neat in version 2.
 @import "retina";
 
 // Do whatever you want to below
-html {-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+html,body {
+	-webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;
+	height: 100%;
+}
 
 .container {
 	@include outer-container;
 	// set width of your choice
 	// for more info go to _common.scss and it's on very top
 	max-width: $w1200;
+}
+
+.page-container {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
 }
