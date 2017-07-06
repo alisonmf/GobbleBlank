@@ -1,43 +1,41 @@
-/*!
- * Retina.js v2.1.0
- *
- * Copyright 2016 Axial, LLC
- * Released under the MIT license
- *
- * Retina.js is an open source script that makes it easy to serve
- * high-resolution images to devices with retina displays.
- */
-'use strict';
+/* @flow */
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+/**
+ * --------------------------------------------------------------------------
+ * Retina.js
+ * Licensed under MIT (https://github.com/strues/retinajs/blob/master/LICENSE)
+ *
+ * Retina.js is an open source script that makes it easy to serve high-resolution
+ * images to devices with retina displays.
+ * --------------------------------------------------------------------------
+ */
+
 /*
  * Determine whether or not `window` is available.
  */
-var hasWindow = typeof window !== 'undefined';
+const hasWindow: boolean = typeof window !== 'undefined';
 
 /*
  * Get the device pixel ratio per our environment.
  * Default to 1.
  */
-var environment = hasWindow ? window.devicePixelRatio || 1 : 1;
+const environment: number = Math.round(hasWindow ? window.devicePixelRatio || 1 : 1);
 
 /*
  * Define a pattern for capturing src url suffixes.
  */
-var srcReplace = /(\.[A-z]{3,4}\/?(\?.*)?)$/;
-var inlineReplace = /url\(('|")?([^\)'"]+)('|")?\)/i;
+const srcReplace = /(\.[A-z]{3,4}\/?(\?.*)?)$/;
+const inlineReplace = /url\(('|")?([^)'"]+)('|")?\)/i;
 
 /*
  * Define our selectors for elements to target.
  */
-var selector = '[data-rjs]';
+const selector: string = '[data-rjs]';
 
 /*
  * Define the attribute we'll use to mark an image as having been processed.
  */
-var processedAttr = 'data-rjs-processed';
+const processedAttr: string = 'data-rjs-processed';
 
 /**
  * Shortcut for turning some iterable object into an array.
@@ -59,8 +57,8 @@ function arrayify(object) {
  *
  * @return {Number} The number we'll be using to create a suffix.
  */
-function chooseCap(cap) {
-  var numericCap = parseInt(cap, 10);
+function chooseCap(cap: number | string) {
+  const numericCap: number = parseInt(cap, 10);
 
   /*
    * If the environment's device pixel ratio is less than what the user
@@ -70,12 +68,12 @@ function chooseCap(cap) {
     return environment;
 
     /*
-     * If the device pixel ratio is greater than or equal to what the
-     * user provided, we'll use what the user provided.
-     */
+   * If the device pixel ratio is greater than or equal to what the
+   * user provided, we'll use what the user provided.
+   */
   } else {
-      return numericCap;
-    }
+    return numericCap;
+  }
 }
 
 /**
@@ -86,7 +84,7 @@ function chooseCap(cap) {
  *
  * @return {Element} The same element that was passed in.
  */
-function forceOriginalDimensions(image) {
+function forceOriginalDimensions(image: HTMLImageElement) {
   if (!image.hasAttribute('data-no-resize')) {
     if (image.offsetWidth === 0 && image.offsetHeight === 0) {
       image.setAttribute('width', image.naturalWidth);
@@ -110,15 +108,15 @@ function forceOriginalDimensions(image) {
  * @return {undefined}
  */
 function setSourceIfAvailable(image, retinaURL) {
-  var imgType = image.nodeName.toLowerCase();
+  const imgType = image.nodeName.toLowerCase();
 
   /*
    * Create a new image element and give it a load listener. When the
    * load listener fires, it means the URL is correct and we will then
    * attach it to the user's image.
    */
-  var testImage = document.createElement('img');
-  testImage.addEventListener('load', function () {
+  const testImage = document.createElement('img');
+  testImage.addEventListener('load', () => {
     /*
      * If we're dealing with an image tag, force it's dimensions
      * and set the source attribute. If not, go after the background-image
@@ -127,7 +125,7 @@ function setSourceIfAvailable(image, retinaURL) {
     if (imgType === 'img') {
       forceOriginalDimensions(image).setAttribute('src', retinaURL);
     } else {
-      image.style.backgroundImage = 'url(' + retinaURL + ')';
+      image.style.backgroundImage = `url(${retinaURL})`;
     }
   });
 
@@ -152,16 +150,14 @@ function setSourceIfAvailable(image, retinaURL) {
  *
  * @return {undefined}
  */
-function dynamicSwapImage(image, src) {
-  var rjs = arguments.length <= 2 || arguments[2] === undefined ? 1 : arguments[2];
-
-  var cap = chooseCap(rjs);
+function dynamicSwapImage(image, src, rjs = 1) {
+  const cap = chooseCap(rjs);
 
   /*
    * Don't do anything if the cap is less than 2 or there is no src.
    */
   if (src && cap > 1) {
-    var newSrc = src.replace(srcReplace, '@' + cap + 'x$1');
+    const newSrc: string = src.replace(srcReplace, `@${cap}x$1`);
     setSourceIfAvailable(image, newSrc);
   }
 }
@@ -175,7 +171,7 @@ function dynamicSwapImage(image, src) {
  *
  * @return {undefined}
  */
-function manualSwapImage(image, src, hdsrc) {
+function manualSwapImage(image: HTMLImageElement, src: string, hdsrc: string): void {
   if (environment > 1) {
     setSourceIfAvailable(image, hdsrc);
   }
@@ -205,7 +201,7 @@ function getImages(images) {
  *
  * @return {String}
  */
-function cleanBgImg(img) {
+function cleanBgImg(img: HTMLImageElement): string {
   return img.style.backgroundImage.replace(inlineReplace, '$2');
 }
 
@@ -221,13 +217,18 @@ function cleanBgImg(img) {
  *
  * @return {undefined}
  */
-function retina(images) {
-  getImages(images).forEach(function (img) {
+function retina(images: Array<HTMLImageElement>) {
+  getImages(images).forEach(img => {
     if (!img.getAttribute(processedAttr)) {
-      var isImg = img.nodeName.toLowerCase() === 'img';
-      var src = isImg ? img.getAttribute('src') : cleanBgImg(img);
-      var rjs = img.getAttribute('data-rjs');
-      var rjsIsNumber = !isNaN(parseInt(rjs, 10));
+      const isImg: boolean = img.nodeName.toLowerCase() === 'img';
+      const src = isImg ? img.getAttribute('src') : cleanBgImg(img);
+      const rjs = img.getAttribute('data-rjs');
+      const rjsIsNumber: boolean = !isNaN(parseInt(rjs, 10));
+
+      // do not try to load /null image!
+      if (rjs === null) {
+        return;
+      }
 
       /*
        * If the user provided a number, dynamically swap out the image.
@@ -246,8 +247,10 @@ function retina(images) {
  * If this environment has `window`, activate the plugin.
  */
 if (hasWindow) {
-  window.addEventListener('load', retina);
+  window.addEventListener('load', () => {
+    retina();
+  });
   window.retinajs = retina;
 }
 
-exports.default = retina;
+export default retina;
