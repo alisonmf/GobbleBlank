@@ -1,9 +1,7 @@
-body {
-  -webkit-font-smoothing: antialiased;
-  background-color: $base-background-color;
+html {
   color: $base-font-color;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-size: 100%;
   line-height: $base-line-height;
 }
 
@@ -13,81 +11,35 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $header-font-family;
-  line-height: $header-line-height;
-  margin: 0;
-  text-rendering: optimizeLegibility; // Fix the character spacing for headings
-}
-
-h1 {
-  font-size: $h1-font-size;
-}
-
-h2 {
-  font-size: $h2-font-size;
-}
-
-h3 {
-  font-size: $h3-font-size;
-}
-
-h4 {
-  font-size: $h4-font-size;
-}
-
-h5 {
-  font-size: $h5-font-size;
-}
-
-h6 {
-  font-size: $h6-font-size;
+  font-family: $heading-font-family;
+  font-size: modular-scale(1);
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
 }
 
 p {
-  margin: 0 0 ($base-spacing / 2);
+  margin: 0 0 $small-spacing;
 }
 
 a {
-  @include transition(color 0.1s linear);
-  color: $base-link-color;
-  text-decoration: none;
+  color: $action-color;
+  text-decoration-skip: ink;
+  transition: color $base-duration $base-timing;
 
   &:hover {
-    color: $hover-link-color;
+    color: shade($action-color, 25%);
   }
 
-  &:active, &:focus {
-    color: $hover-link-color;
-    outline: none;
+  &:focus {
+    outline: $focus-outline;
+    outline-offset: $focus-outline-offset;
   }
 }
 
 hr {
   border-bottom: $base-border;
-  border-left: none;
-  border-right: none;
-  border-top: none;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
   margin: $base-spacing 0;
-}
-
-img,
-picture {
-  margin: 0;
-  max-width: 100%;
-}
-
-blockquote {
-  border-left: 2px solid $base-border-color;
-  color: lighten($base-font-color, 15);
-  margin: $base-spacing 0;
-  padding-left: $base-spacing / 2;
-}
-
-cite {
-  color: lighten($base-font-color, 25);
-  font-style: italic;
-
-  &:before {
-    content: "\2014 \00A0";
-  }
 }
