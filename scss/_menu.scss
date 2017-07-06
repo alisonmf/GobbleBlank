@@ -1,9 +1,10 @@
 // 1. Theme Quick Settings (Variables)
 // (for further control, you will need to dig into the actual CSS in 2.)
-
+// -----------------------------------------------------------------------------------------------------------------
 // ----------------------------------------------------------
 // :: 1.1. Colors
 // ----------------------------------------------------------
+
 $sm-simple__white:										#fff !default;
 $sm-simple__gray:										darken($sm-simple__white, 6.5%) !default;
 $sm-simple__gray-dark:									darken($sm-simple__white, 26.5%) !default;
@@ -11,11 +12,13 @@ $sm-simple__gray-darker:								darken($sm-simple__white, 66.5%) !default;
 
 $sm-simple__box-shadow:									rgba(0, 0, 0, 0.2) !default;
 
+
 // ----------------------------------------------------------
 // :: 1.2. Breakpoints
 // ----------------------------------------------------------
 
 $sm-simple__desktop-vp:									768px !default;		// switch from collapsible to desktop
+
 
 // ----------------------------------------------------------
 // :: 1.3. Typography
@@ -26,11 +29,13 @@ $sm-simple__font-size-base:								16px !default;
 $sm-simple__font-size-small:							14px !default;
 $sm-simple__line-height:								17px !default;
 
+
 // ----------------------------------------------------------
 // :: 1.4. Borders
 // ----------------------------------------------------------
 
 $sm-simple__border-width:								1px !default;
+
 
 // ----------------------------------------------------------
 // :: 1.5. Collapsible main menu
@@ -55,6 +60,7 @@ $sm-simple__collapsible-separators-color:				rgba(0, 0, 0, 0.05) !default;
 // Toggle button (sub menu indicators)
 $sm-simple__collapsible-toggle-bg:						rgba(0, 0, 0, 0.08) !default;
 
+
 // ----------------------------------------------------------
 // :: 1.6. Collapsible sub menus
 // ----------------------------------------------------------
@@ -65,6 +71,7 @@ $sm-simple__collapsible-sub-bg:							rgba(darken($sm-simple__collapsible-bg, 30
 // Items text indentation for deeper levels
 $sm-simple__collapsible-sub-item-indentation:			8px !default;
 
+
 // ----------------------------------------------------------
 // :: 1.7. Desktop main menu and sub menus
 // ----------------------------------------------------------
@@ -73,7 +80,7 @@ $sm-simple__collapsible-sub-item-indentation:			8px !default;
 $sm-simple__desktop-bg:									$sm-simple__white !default;
 
 // Items
-$sm-simple__desktop-item-color:							$sm-simple__gray_darker !default;
+$sm-simple__desktop-item-color:							$sm-simple__gray-darker !default;
 $sm-simple__desktop-item-hover-bg:						$sm-simple__gray !default;
 $sm-simple__desktop-item-current-color:					$sm-simple__white !default;
 $sm-simple__desktop-item-current-bg:					$sm-simple__gray-darker !default;
@@ -89,7 +96,10 @@ $sm-simple__desktop-separators-color:					$sm-simple__gray !default;
 $sm-simple__desktop-arrow-spacing:						4px !default;
 
 
+// -----------------------------------------------------------------------------------------------------------------
 // 2. Theme CSS
+// -----------------------------------------------------------------------------------------------------------------
+
 
 // ----------------------------------------------------------
 // :: 2.1. Collapsible mode (mobile first)
@@ -101,21 +111,11 @@ $sm-simple__item-height: $sm-simple__line-height + $sm-simple__collapsible-item-
 $sm-simple__toggle-size: floor($sm-simple__item-height * 0.8);
 $sm-simple__toggle-spacing: floor($sm-simple__item-height * 0.1);
 
-//horizontal justify of menu
-@media (min-width: 768px) {
-		#main-menu > li {
-			float: none;
-			display: table-cell;
-			width: 1%;
-			text-align: center;
-		}
-	}
-
 // Main menu box
 .sm-simple {
-	//border: $sm-simple__border-width solid $sm-simple__collapsible-border-color;
+	border: $sm-simple__border-width solid $sm-simple__collapsible-border-color;
 	background: $sm-simple__collapsible-bg;
-	//@include box-shadow($sm-simple__collapsible-box-shadow);
+	@include box-shadow($sm-simple__collapsible-box-shadow);
 
 	// Main menu items
 	a {
@@ -193,6 +193,17 @@ $sm-simple__toggle-spacing: floor($sm-simple__item-height * 0.1);
 		@include sm-simple__sub-items-indentation($sm-simple__collapsible-sub-item-indentation);
 	}
 }
+
+//horizontal justify of menu
+// @media (min-width: 768px) {
+// 		#main-menu > li {
+// 			float: none;
+// 			display: table-cell;
+// 			width: 1%;
+// 			text-align: center;
+// 		}
+// 	}
+
 
 // ----------------------------------------------------------
 // :: 2.2. Desktop mode
@@ -282,7 +293,7 @@ $sm-simple__toggle-spacing: floor($sm-simple__item-height * 0.1);
 		ul {
 			border: $sm-simple__border-width solid $sm-simple__collapsible-border-color;
 			background: $sm-simple__desktop-bg;
-			//@include box-shadow($sm-simple__collapsible-box-shadow);
+			@include box-shadow($sm-simple__collapsible-box-shadow);
 
 			// Sub menus items
 			a {
@@ -409,6 +420,7 @@ $sm-simple__toggle-spacing: floor($sm-simple__item-height * 0.1);
 			}
 		}
 
+
 		// Vertical main menu
 
 		// Main menu box
@@ -436,79 +448,95 @@ $sm-simple__toggle-spacing: floor($sm-simple__item-height * 0.1);
 	}
 }
 
+/* Mobile first layout SmartMenus Core CSS (it's not recommended editing these rules)
+   You need this once per page no matter how many menu trees or different themes you use.
+-------------------------------------------------------------------------------------------*/
+
+.sm{position:relative;z-index:9999;}
+.sm,.sm ul,.sm li{display:block;list-style:none;margin:0;padding:0;line-height:normal;direction:ltr;text-align:left;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.sm-rtl,.sm-rtl ul,.sm-rtl li{direction:rtl;text-align:right;}
+.sm>li>h1,.sm>li>h2,.sm>li>h3,.sm>li>h4,.sm>li>h5,.sm>li>h6{margin:0;padding:0;}
+.sm ul{display:none;}
+.sm li,.sm a{position:relative;}
+.sm a{display:block;}
+.sm a.disabled{cursor:not-allowed;}
+.sm:after{content:"\00a0";display:block;height:0;font:0px/0 serif;clear:both;visibility:hidden;overflow:hidden;}
+.sm,.sm *,.sm *:before,.sm *:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+
+
 //sm core, don't reccomend changing anything here
-.sm {
-  position: relative;
-  z-index: 9999;
-  display: block;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  line-height: normal;
-  direction: ltr;
-  text-align: left;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  ul, li {
-    display: block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    line-height: normal;
-    direction: ltr;
-    text-align: left;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-}
-
-.sm-rtl {
-  direction: rtl;
-  text-align: right;
-  ul, li {
-    direction: rtl;
-    text-align: right;
-  }
-}
-
-.sm {
-  > li > {
-    h1, h2, h3, h4, h5, h6 {
-      margin: 0;
-      padding: 0;
-    }
-  }
-  ul {
-    display: none;
-  }
-  li {
-    position: relative;
-  }
-  a {
-    position: relative;
-    display: block;
-    &.disabled {
-      cursor: not-allowed;
-    }
-  }
-  &:after {
-    content: "\00a0";
-    display: block;
-    height: 0;
-    font: 0px/0 serif;
-    clear: both;
-    visibility: hidden;
-    overflow: hidden;
-  }
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    &:before, &:after {
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-    }
-  }
-}
+// .sm {
+//   position: relative;
+//   z-index: 9999;
+//   display: block;
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+//   line-height: normal;
+//   direction: ltr;
+//   text-align: left;
+//   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+//   ul, li {
+//     display: block;
+//     list-style: none;
+//     margin: 0;
+//     padding: 0;
+//     line-height: normal;
+//     direction: ltr;
+//     text-align: left;
+//     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+//   }
+// }
+//
+// .sm-rtl {
+//   direction: rtl;
+//   text-align: right;
+//   ul, li {
+//     direction: rtl;
+//     text-align: right;
+//   }
+// }
+//
+// .sm {
+//   > li > {
+//     h1, h2, h3, h4, h5, h6 {
+//       margin: 0;
+//       padding: 0;
+//     }
+//   }
+//   ul {
+//     display: none;
+//   }
+//   li {
+//     position: relative;
+//   }
+//   a {
+//     position: relative;
+//     display: block;
+//     &.disabled {
+//       cursor: not-allowed;
+//     }
+//   }
+//   &:after {
+//     content: "\00a0";
+//     display: block;
+//     height: 0;
+//     font: 0px/0 serif;
+//     clear: both;
+//     visibility: hidden;
+//     overflow: hidden;
+//   }
+//   -moz-box-sizing: border-box;
+//   -webkit-box-sizing: border-box;
+//   box-sizing: border-box;
+//   * {
+//     -moz-box-sizing: border-box;
+//     -webkit-box-sizing: border-box;
+//     box-sizing: border-box;
+//     &:before, &:after {
+//       -moz-box-sizing: border-box;
+//       -webkit-box-sizing: border-box;
+//       box-sizing: border-box;
+//     }
+//   }
+// }

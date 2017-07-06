@@ -1,11 +1,12 @@
-/*!
- * SmartMenus jQuery Plugin - v1.0.0 - January 27, 2016
+/*
+ * SmartMenus jQuery v1.0.1+
  * http://www.smartmenus.org/
  *
  * Copyright Vasil Dinkov, Vadikom Web Ltd.
- * http://vadikom.com
+ * http://vadikom.com/
  *
- * Licensed MIT
+ * Released under the MIT license:
+ * http://www.opensource.org/licenses/MIT
  */
 
 (function(factory) {
@@ -316,7 +317,7 @@
 					return;
 				}
 				// hide on any click outside the menu or on a menu link
-				if (this.visibleSubMenus.length && !$.contains(this.$root[0], e.target) || $(e.target).is('a')) {
+				if (this.visibleSubMenus.length && !$.contains(this.$root[0], e.target) || $(e.target).closest('a').length) {
 					this.menuHideAll();
 				}
 			},
@@ -421,7 +422,7 @@
 				return this.$firstSub.css('position') == 'static';
 			},
 			isCSSOn: function() {
-				return this.$firstLink.css('display') == 'block';
+				return this.$firstLink.css('display') != 'inline';
 			},
 			isFixed: function() {
 				var isFixed = this.$root.css('position') == 'fixed';
@@ -1144,11 +1145,11 @@
 			return this.data(key + '_smartmenus', val);
 		}
 		return this.data(key + '_smartmenus');
-	}
+	};
 
 	$.fn.removeDataSM = function(key) {
 		return this.removeData(key + '_smartmenus');
-	}
+	};
 
 	$.fn.smartmenus = function(options) {
 		if (typeof options == 'string') {
@@ -1162,11 +1163,20 @@
 				}
 			});
 		}
-		var opts = $.extend({}, $.fn.smartmenus.defaults, options);
 		return this.each(function() {
-			new $.SmartMenus(this, opts);
+			// [data-sm-options] attribute on the root UL
+			var dataOpts = $(this).data('sm-options') || null;
+			if (dataOpts) {
+				try {
+					dataOpts = eval('(' + dataOpts + ')');
+				} catch(e) {
+					dataOpts = null;
+					alert('ERROR\n\nSmartMenus jQuery init:\nInvalid "data-sm-options" attribute value syntax.');
+				};
+			}
+			new $.SmartMenus(this, $.extend({}, $.fn.smartmenus.defaults, options, dataOpts));
 		});
-	}
+	};
 
 	// default settings
 	$.fn.smartmenus.defaults = {
